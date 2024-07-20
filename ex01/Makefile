@@ -15,9 +15,9 @@ WARNING_EMOJI=⚠️
 ERROR_EMOJI=❌
 COOL_EMOJI=😎
 
-NAME = megaphone
+NAME = phonebook
 
-SRCS = megaphone.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
