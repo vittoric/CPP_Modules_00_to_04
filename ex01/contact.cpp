@@ -16,12 +16,12 @@ void Contact::getLastName(std::string lastNameValue){
     this->lastName = lastNameValue;
 }
 
-void Contact::getNickName(srd::string nickNameValue){
+void Contact::getNickName(std::string nickNameValue){
     this->nickName =nickNameValue;
 }
 
 void Contact::getPhoneNumber(std::string phoneNumbreValue){
-    this->phoneNumbre = phoneNumbreValue;
+    this->phoneNumber = phoneNumbreValue;
 }
 
 void Contact::getDarkestSecret(std::string darkestSecretValue){
@@ -33,7 +33,7 @@ void Contact::printKeyWords(void){
     std::cout << "Last Name: " << this->lastName << std::endl;
     std::cout << "Nick Name: " << this->nickName << std::endl;
     std::cout << "Phone Number: " << this->phoneNumber << std::endl;
-    srd::cout << "Darkest Secret: " << this->darkestSecret << std::endl;
+    std::cout << "Darkest Secret: " << this->darkestSecret << std::endl;
 }
 
 void Contact::printContact(void){
@@ -41,8 +41,8 @@ void Contact::printContact(void){
         std::cout << std::setw(10) << this->firstName.substr(0, 9) << ".|" ;
     else
         std::cout << std::setw(11) << this->firstName << "|" ;
-    if (this->lastName.lenght() > 10)
-        std::cout << std::setw << this->lastName.substr(0, 9) << ".|" ;
+    if (this->lastName.length() > 10)
+        std::cout << std::setw(10) << this->lastName.substr(0, 9) << ".|" ;
     else
         std::cout << std::setw(11) << this->lastName << "|" ;
     if (this->nickName.length() > 10)

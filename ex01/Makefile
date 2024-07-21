@@ -17,7 +17,7 @@ COOL_EMOJI=😎
 
 NAME = phonebook
 
-SRCS = main.cpp
+SRCS =  contact.cpp phoneBook.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
