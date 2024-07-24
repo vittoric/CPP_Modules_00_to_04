@@ -33,7 +33,7 @@ std::string PhoneBook::getInput(std::string input) {
         std::cout << input << ": ";
         std::getline(std::cin, str);
         str = trimmingPhone(str);
-    } while (str.empty() || (!isNumber(str) && input == "Phone Number"));
+    } while (std::cin.eof() || str.empty() || (!isNumber(str) && input == "Phone Number"));
     return str;
 }
 
@@ -50,7 +50,7 @@ void PhoneBook::addContact() {
 
 void PhoneBook::serchContact() {
     std::string str;
-    int index;
+    int index = -1;
     
     if (this->contactTotal == 0) {
         std::cout << "No contacts to search for. Please add a contact first." << std::endl;
@@ -65,16 +65,22 @@ void PhoneBook::serchContact() {
         std::cout << "Enter the index of the contact you would like to see: ";
         std::getline(std::cin, str);
         str = trimmingPhone(str);
-        if (!isNumber(str)) {
+        std::cout << "str equalls " << str << std::endl;
+        if (!isNumber(str))
+        {
             std::cout << "Invalid index. Please enter a number." << std::endl;
-            continue;
+            std::cin.clear();
         }
-        index = std::stoi(str);
-        if (index < 0 || index >= this->contactTotal) {
-            std::cout << "Invalid index. Please enter a valid index." << std::endl;
+        else
+        {
+            std::stringstream ss(str);
+            ss >> index;
+            if (index < 0 || index >= this->contactTotal) {
+                std::cout << "Invalid index. Please enter a valid index." << std::endl;
+            }
         }
     } while (str.empty() || index < 0 || index >= this->contactTotal);
-
+    std::cout << "we got out; index equals " << index << std::endl;
     this->contacts[index].printKeyWords();
 }
 

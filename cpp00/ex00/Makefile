@@ -24,7 +24,7 @@ DEPS = $(SRCS:.cpp=.d)
 CC = c++
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-CPPFLAGS = -MMD -MP  # Para generar archivos de dependencias (.d)
+CPPFLAGS = -MMD -MP
 
 all: ${NAME}
 
