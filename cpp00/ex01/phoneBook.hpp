@@ -5,6 +5,7 @@
 #include <string>
 #include <cctype>
 #include <sstream>
+#include <stdio.h>
 
 class PhoneBook {
     public:
