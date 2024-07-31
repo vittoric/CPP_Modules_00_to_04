@@ -38,11 +38,30 @@ Deepen into object-oriented programming and memory management.
 - Operator overloading
 - Pointers and references
 - Dynamic memory management
+- Heap and Stak
 
 ### Exercises
 - Creating classes with constructors and destructors
 - Implementing operator overloading
 - Using pointers and references in functions and classes
+
+#### Ex 00
+- Stack: It is a memory area where local variables are automatically stored and managed. When the function in which these variables are declared terminates, the memory is automatically freed.
+
+- Heap: It is an area of memory where objects can be dynamically allocated using new and manually released using delete. The objects in the heap remain in memory until they are explicitly freed, regardless of the scope of the functions.
+
+When to Use Stack vs Heap
+Use stack when:
+
+- You only need the object to exist for the lifetime of the function in which it was created.
+You want memory to be handled automatically (you don't care about delete).
+You want to take advantage of the efficiency of the stack (operations on the stack are usually faster than on the heap).
+Use the heap when:
+
+- You need the object to persist after the function in which it was created has finished.
+The size of the object is too large or you don't know the size during compilation.
+You are creating a dynamic number of objects (for example, in a loop where you don't know how many objects will be needed).
+
 
 ## CPP02
 
