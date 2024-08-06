@@ -1,6 +1,7 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
@@ -8,21 +9,13 @@ class Fixed
         int _value;
         static const int _fractionalBits = 8;
     public:
-        //Ortodox Canonic Form
-        //Default constructor
         Fixed();
-
-        //Copy constructor
         Fixed(const Fixed &fixed);
-
-        // Copy assignment operator
         Fixed &operator = (const Fixed &fixed);
-
-        //Destructor
         ~Fixed();
 
-        int getRawBits( void ) const;
-        void setRawBits( int const raw );
+        float toFloat( void ) const;
+        int toInt( void ) const;
 
 };
 
