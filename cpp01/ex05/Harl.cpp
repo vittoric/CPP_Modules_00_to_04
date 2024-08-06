@@ -1,11 +1,13 @@
 #include "Harl.hpp"
 
-Harl::Harl(){
-    std::cout<< "Harl is created" << std::endl; 
+Harl::Harl()
+{
+    std::cout << "Harl is created" << std::endl;
 }
 
-Harl::~Harl(){
-    std::cout<< "Harl has been killed for being annoying" << std::endl; 
+Harl::~Harl()
+{
+    std::cout << "Harl has been killed for being annoying" << std::endl;
 }
 
 void Harl::debug(void)
@@ -34,8 +36,8 @@ void Harl::complain(std::string level)
     HarlFunction functions[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    
-    for( int i = 0; i < 4; i++)
+
+    for (int i = 0; i < 4; i++)
     {
         if (level == levels[i])
         {
