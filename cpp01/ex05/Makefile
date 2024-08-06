@@ -17,7 +17,7 @@ COOL_EMOJI=😎
 
 NAME = harl2.0
 
-SRCS = main.cpp FileProcessor.cpp
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
