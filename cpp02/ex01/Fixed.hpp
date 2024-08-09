@@ -1,7 +1,7 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 #include <iostream>
-#include <cmath>
+#include <cmath> //roundf() library
 #include <string>
 
 class Fixed
@@ -15,7 +15,7 @@ public:
     Fixed(const Fixed &fixed);
     Fixed &operator=(const Fixed &fixed);
     ~Fixed();
-
+    //new constructors
     Fixed(int const intVal);
     Fixed(float const floatVal);
 
@@ -26,6 +26,7 @@ public:
     int toInt(void) const;
 };
 
+//overload operator 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
