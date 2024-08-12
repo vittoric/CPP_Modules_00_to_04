@@ -40,7 +40,7 @@ ${NAME}: ${OBJS}
 
 clean:
 	@echo "${CLEAN_EMOJI} ${MAGENTA}Cleaning files...${RESET}"
-	@${RM} ${OBJS} ${DEPS}
+	@${RM} ${OBJS} ${DEPS} .txt
 
 fclean: clean
 	@echo "${RECYCLE_EMOJI} ${YELLOW} Removing executable...${RESET}"
