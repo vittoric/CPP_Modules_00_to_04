@@ -15,7 +15,7 @@ public:
     Fixed(const Fixed &fixed);
     Fixed &operator=(const Fixed &fixed);
     ~Fixed();
-    //new constructors
+    // new constructors
     Fixed(int const intVal);
     Fixed(float const floatVal);
 
@@ -26,7 +26,7 @@ public:
     int toInt(void) const;
 };
 
-//overload operator 
+// overload operator
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif

@@ -1,13 +1,17 @@
 #include "Harl.hpp"
 
+#define RESET "\033[0m"
+#define BORN "\033[106m"   // Azul para heap
+#define ERROR "\033[101m"   // red background
+
 Harl::Harl()
 {
-    std::cout << "Harl is created" << std::endl;
+    std::cout << BORN << "Harl is created" << RESET << std::endl;
 }
 
 Harl::~Harl()
 {
-    std::cout << "Harl has been killed for being annoying" << std::endl;
+    std::cout << ERROR << "Harl has been killed for being annoying" << RESET << std::endl;
 }
 
 void Harl::debug(void)
