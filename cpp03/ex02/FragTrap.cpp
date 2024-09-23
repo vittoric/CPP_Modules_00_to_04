@@ -24,7 +24,7 @@ FragTrap::FragTrap(const FragTrap &fragTrap)
 
 FragTrap &FragTrap::operator=(const FragTrap &fragTrap)
 {
-    std::cout << "\033[34mFragTrap ssignment operator called\033[0m" << std::endl;
+    std::cout << "\033[34mFragTrap asignment operator called\033[0m" << std::endl;
     if(this != &fragTrap)
     {
         this->_name = fragTrap._name;
@@ -42,5 +42,14 @@ FragTrap:: ~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << "\033[35mFragTrap says: High five guys!\033[0m" << std::endl;
+    if(_hitPoints == 0)
+    {
+        std::cout << "\033[41mFragTrap " << _name << " is already dead and cannot high five!\033[0m" << std::endl;
+        return;
+    }
+    else
+    {
+        std::cout << "\033[35mFragTrap says: High five guys!\033[0m" << std::endl;
+        return;
+    }
 }

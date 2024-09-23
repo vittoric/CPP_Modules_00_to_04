@@ -4,19 +4,19 @@
 int main()
 {
     std::cout << "--- Creating ClapTrap ---" << std::endl;
-    ClapTrap clap("ClapTrap");
+    ClapTrap clap("Boo");
     std::cout << std::endl;
 
     std::cout << "--- Creating ScavTrap ---" << std::endl;
-    ScavTrap scav("ScavTrap");
+    ScavTrap scav("Foo");
     std::cout << std::endl;
 
     std::cout << "--- ScavTrap attacks ClapTrap ---" << std::endl;
-    scav.attack("ClapTrap");
+    scav.attack("Boo");
     std::cout << std::endl;
 
     std::cout << "--- ClapTrap attacks ScavTrap ---" << std::endl;
-    clap.attack("ScavTrap");
+    clap.attack("Foo");
     std::cout << std::endl;
 
     std::cout << "--- Testing ScavTrap guardGate ---" << std::endl;

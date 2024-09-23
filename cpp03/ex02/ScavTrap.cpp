@@ -60,5 +60,11 @@ void ScavTrap::attack(const std::string &target)
 
 void ScavTrap::guardGate()
 {
-    std::cout << "\033[107mScavTrap " << _name << " has entered in Gate keeper mode!\033[0m" << std::endl;
+    if(_hitPoints == 0)
+    {
+        std::cout << "\033[41mScavTrap " << _name << " is already dead and cannot guard the gate!\033[0m" << std::endl;
+        return;
+    }
+    else
+        std::cout << "\033[107mScavTrap " << _name << " has entered in Gate keeper mode!\033[0m" << std::endl;
 }
