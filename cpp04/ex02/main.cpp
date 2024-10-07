@@ -25,12 +25,14 @@ int main()
         std::cout << std::endl;
     }
 
-	Animal *a = new Animal("Animal");
-	
+	//Animal *a = new Animal("Animal");
+	//a->makeSound();
+	std::cout << std::endl;
 	Dog *d = new Dog();
 	Dog *k = new Dog(*d);
     std::cout << std::endl;
-	a->makeSound();
+	
+	std::cout << std::endl;
 	k->makeSound();
     std::cout << std::endl;
 	delete d;

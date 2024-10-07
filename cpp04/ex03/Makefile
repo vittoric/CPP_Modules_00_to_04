@@ -15,8 +15,8 @@ WARNING_EMOJI=⚠️
 ERROR_EMOJI=❌
 COOL_EMOJI=😎
 
-NAME = brainzzzzz
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+NAME = interface 
+SRCS = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 

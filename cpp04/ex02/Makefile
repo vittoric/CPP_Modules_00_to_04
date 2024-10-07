@@ -15,7 +15,7 @@ WARNING_EMOJI=⚠️
 ERROR_EMOJI=❌
 COOL_EMOJI=😎
 
-NAME = brainzzzzz
+NAME = abstarctAnimal
 SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
