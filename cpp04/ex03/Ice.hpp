@@ -5,4 +5,17 @@
 #include <iostream>
 #include <string>
 
+class Ice : public AMateria
+{
+public:
+    Ice();
+    Ice(const std::string &type);
+    Ice(const Ice &ice);
+    Ice &operator=(const Ice &ice);
+    virtual ~Ice();
+
+    virtual AMateria *clone() const;
+    virtual void use(ICharacter &target);
+};
+
 #endif

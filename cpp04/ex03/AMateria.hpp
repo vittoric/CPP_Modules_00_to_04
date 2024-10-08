@@ -6,15 +6,18 @@
 
 class AMateria
 {
-private:
-    /* data */
+protected:
+    std::string type;
+
 public:
     AMateria();
     AMateria(std::string &type);
     AMateria(const AMateria &materia);
     AMateria &operator=(const AMateria &materia);
-    ~AMateria();
+    virtual ~AMateria();
+
     std::string const &getType() const;
+
     virtual AMateria *clone() const = 0;
     virtual void use(ICharacter &target);
 };
