@@ -1,5 +1,5 @@
 #include "AMateria.hpp"
-#include "Character.hpp"
+#include "ICharacter.hpp"
 
 AMateria::AMateria() : type("default")
 {
