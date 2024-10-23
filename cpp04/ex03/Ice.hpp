@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 
+class AMateria;
 
 
 class Ice : public AMateria

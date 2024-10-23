@@ -13,7 +13,7 @@ protected:
 
 public:
     AMateria();
-    AMateria(std::string &type);
+    AMateria(const std::string &type);
     AMateria(const AMateria &materia);
     AMateria &operator=(const AMateria &materia);
     virtual ~AMateria();

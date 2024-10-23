@@ -6,7 +6,7 @@ MateriaSource::MateriaSource(){
         this->inventory[i]  = NULL;
 }
 
-MateriaSource::MateriaSource(std::string &name){
+MateriaSource::MateriaSource(const std::string &name){
     this->name = name;
     for (int i = 0; i < 4; i++)
         this->inventory[i]=NULL;

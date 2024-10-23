@@ -5,7 +5,7 @@ Cure::Cure() : AMateria(){
     this->type = "cure";
 }
 
-Cure::Cure(std::string &type){
+Cure::Cure(const std::string &type){
     this->type = type;
 }
 
@@ -26,7 +26,7 @@ Cure::~Cure(){
 }   
 
 void Cure::use(ICharacter &target){
-    //AMateria::use(target);
+    AMateria::use(target);
     std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }
 

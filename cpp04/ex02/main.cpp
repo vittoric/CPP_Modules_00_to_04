@@ -35,6 +35,8 @@ int main()
 	std::cout << std::endl;
 	k->makeSound();
     std::cout << std::endl;
+
+	// Animal* animal = new Animal(); // Error: cannot instantiate an abstract class
 	delete d;
 	delete k;
 	return (0);

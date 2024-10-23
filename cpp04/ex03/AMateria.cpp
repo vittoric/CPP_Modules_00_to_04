@@ -6,7 +6,7 @@ AMateria::AMateria() : type("default")
     std::cout << "AMateria Default constructor" << std::endl;
 }
 
-AMateria::AMateria(std::string &type) : type(type)
+AMateria::AMateria(const std::string &type) : type(type)
 {
     std::cout << "AMateria constructor called. Type " << type << std::endl;
 }

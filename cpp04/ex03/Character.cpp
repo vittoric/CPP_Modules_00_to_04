@@ -6,7 +6,7 @@ Character::Character(){
          this->inventory[i] = NULL;
 }
 
-Character::Character(std::string const &name)
+Character::Character(const std::string &name)
 {
     this->name = name;
     for (int i = 0; i < 4; i++)
@@ -45,23 +45,19 @@ std::string const &Character::getName() const{
 void Character::equip(AMateria *m){
     for (int i = 0; i < 4; i++){
         if(this->inventory[i] == NULL){
-            this->inventory[i] = m->clone();
+            this->inventory[i] = m;
             break;
         }
     }
-    delete m;
+   // delete m;
 }
 
 void Character::unequip(int idx){
-   for(int i = 0; i < 4; i++){
-        if(idx ==  i){
-            delete this->inventory[i];
-            this->inventory[i] = NULL;
-        }
-    }
+   if (idx >= 0 && idx < 4)
+        this->inventory[idx] = NULL; 
 }
 
 void Character::use(int idx, ICharacter &target){
-    if(this->inventory[idx])
+    if(idx >= 0 && idx < 4 && this->inventory[idx]) 
         this->inventory[idx]->use(target);
 }

@@ -8,7 +8,7 @@ class Cure : public AMateria
 {
 public:
     Cure();
-    Cure(std::string &type);
+    Cure(const std::string &type);
     Cure(const Cure &cure);
     Cure &operator=(const Cure &cure);
     virtual ~Cure();

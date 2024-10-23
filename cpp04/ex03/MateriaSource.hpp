@@ -16,7 +16,7 @@ private:
 
 public:
     MateriaSource();
-    MateriaSource(std::string &name);
+    MateriaSource(const std::string &name);
     MateriaSource(const MateriaSource &materiaSource);
     MateriaSource &operator=(const MateriaSource &materia);
     ~MateriaSource();

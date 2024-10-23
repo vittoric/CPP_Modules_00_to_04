@@ -25,9 +25,12 @@ int main()
     std::cout << "----- WrongAnimal Tests -----" << std::endl;
     const WrongAnimal* wrongMeta = new WrongAnimal();
     const WrongAnimal* wrongCat = new WrongCat();
+    const WrongCat* wrongMiau = new WrongCat();
+
 
     std::cout << wrongCat->getType() << " says: ";
     wrongCat->makeSound(); // WrongAnimal makes a sound.
+    wrongMiau->makeSound(); // Imprime: "Wrong meow!"
 
     std::cout << std::endl;
 
@@ -36,6 +39,7 @@ int main()
     delete i;
     delete wrongMeta;
     delete wrongCat;
+    delete wrongMiau;
 
     return 0;
 }
